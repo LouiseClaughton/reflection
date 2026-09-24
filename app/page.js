@@ -235,6 +235,11 @@ export default function Home() {
             </div>
 
             <div className="card">
+              <span>Total repositories</span>
+              <strong>{summary.repositories.length}</strong>
+            </div>
+
+            <div className="card">
               <span>Active days</span>
               <strong>{activeDays}</strong>
             </div>
@@ -259,7 +264,6 @@ export default function Home() {
                   <CartesianGrid vertical={false} />
                   <XAxis dataKey="month" />
                   <YAxis allowDecimals={false} />
-                  <Tooltip />
 
                   <Bar
                     dataKey="github"
@@ -314,9 +318,6 @@ export default function Home() {
       )}
 
       <footer>
-        <span>
-          Tokens stay server-side in environment variables.
-        </span>
       </footer>
     </main>
   );
